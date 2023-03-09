@@ -85,12 +85,17 @@ const createObject3: Creator = name => {
 
 const myArr: number[] = [1, 2, 3, 4, 5];
 const myArr2: Array<number> = [1, 2, 3, 4, 5];
+const myTuple: [number, string, string] = [1, 'man', 'dog'];
+
 const myArr3: Obj[] = [];
 const myArr4 = [];
 
 const i = myArr4[0];
 myArr4.push(1);
 const j = myArr4[0];
+
+const myArr5: number[] = [1];
+const x: number = myArr4[5];
 
 
 
@@ -127,8 +132,6 @@ async function http<T>(url: string): Promise<T> {
   });
 }
 
-type SafeUrl = `https://${string}`;
-
 
 function getName(obj: Obj): string {
   return obj.name;
@@ -153,6 +156,7 @@ const bobsName = getNameGeneric({ name: 'Bob', age: '42', something: 'else' });
 
 
 // String templates
+type SafeUrl = `https://${string}`;
 
 async function httpSafe<T>(url: SafeUrl): Promise<T> {
   return new Promise<T>(resolve => {

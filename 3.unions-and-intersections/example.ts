@@ -18,7 +18,7 @@ interface Pig {
 
 const namelessPig: Pig = {
   talk: () => console.log('Bahgurk!'),
-  eggProduction: 5
+  baconQuantity: 5
 }
 
 
@@ -47,6 +47,7 @@ function talkAnimal(animal: Chicken | Pig) {
   // type narrowing works, but typeof won't work
   if ('eggProduction' in animal) {
     console.log(`I have ${animal.eggProduction} eggs!`);
+    console.log(`I have ${animal.legs} legs!`);
   } else {
     console.log(`I have ${animal.baconQuantity} bacon!`);
   }
