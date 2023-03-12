@@ -2,11 +2,13 @@
 interface Chicken {
   talk: () => void;
   eggProduction: number;
+  legs: number;
   name?: string;
 }
 
 const namelessChicken: Chicken = {
   talk: () => console.log('Give me a name. Bahgurk!'),
+  legs: 2,
   eggProduction: 5
 }
 
@@ -68,6 +70,7 @@ function createFrankenAnimal(): Chicken & Pig & GuineaPig {
     talk: () => console.log('I am a chicken guinea pig pig!'),
     eggProduction: 5,
     baconQuantity: 5,
+    legs: 2,
     gender: 'X',
     name: 'Frank'
   }
